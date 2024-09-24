@@ -53,3 +53,52 @@ int hexadecimalParaDecimal(char hexa[]) {
     sscanf(hexa, "%x", &decimal);
     return decimal;
 }
+
+int main() {
+    char binario[32], hexa[32];
+    int decimal, opcao;
+    
+    printf("Escolha uma conversão:\n");
+    printf("1. Binário para Decimal\n");
+    printf("2. Decimal para Binário\n");
+    printf("3. Binário para Hexadecimal\n");
+    printf("4. Hexadecimal para Binário\n");
+    printf("5. Hexadecimal para Decimal\n");
+    printf("Opção: ");
+    scanf("%d", &opcao);
+    
+    switch(opcao) {
+        case 1:
+            printf("Digite o valor em binário: ");
+            scanf("%s", binario);
+            printf("Decimal: %d\n", binarioParaDecimal(binario));
+            break;
+        case 2:
+            printf("Digite o valor em decimal: ");
+            scanf("%d", &decimal);
+            printf("Binário: ");
+            decimalParaBinario(decimal);
+            break;
+        case 3:
+            printf("Digite o valor em binário: ");
+            scanf("%s", binario);
+            printf("Hexadecimal: ");
+            binarioParaHexadecimal(binario);
+            break;
+        case 4:
+            printf("Digite o valor em hexadecimal: ");
+            scanf("%s", hexa);
+            printf("Binário: ");
+            hexadecimalParaBinario(hexa);
+            break;
+        case 5:
+            printf("Digite o valor em hexadecimal: ");
+            scanf("%s", hexa);
+            printf("Decimal: %d\n", hexadecimalParaDecimal(hexa));
+            break;
+        default:
+            printf("Opção inválida.\n");
+    }
+    
+    return 0;
+}
