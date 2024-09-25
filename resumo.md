@@ -155,3 +155,5 @@ test : and bit a bit (& em c)
 ![alt text](ex3loop.jpg)
 
 ![alt text](res3loop.jpg)
+
+!Exercício que vc soma +1 em uma variável e fica voltando geralmente é um for (pode ser um while mas for é mais fácil)
