@@ -56,6 +56,12 @@ registradores 64 bits quando começar com R e 32 bits quando começar com E.
 
 Eax / Rax é variavel de retorno
 
+![alt text](registradores.jpg)
+
+![alt text](visao.jpg)
+
+![alt text](reg.jpg)
+
 # Assembly pra C
 
 Seguir a ordem dos registradores : 
@@ -74,8 +80,78 @@ quando for fazer a tradução de um registrador rxx o tipo será long (64 bits)
 
 obs : shorts (16 bits)
 
-### Exemplo :
+mul -> sem sinal
+
+imul -> com sinal
+
+push caso use alguma variável antes (global) para usar dentro da função de um push
+
+pop para retornar o valor original pra pilha
+
+call chama outra função
+
+ponteiro vai ser int no codigo c, caso o return seja int tambem (eax) pq int -> int
+
+sil -> recebe apenas os 8 primeiros bits de rsi
+
+a hierarquia importa se aparece exx e rxx importa o rxx vai ser long
+
+### Exemplo simples :
 
 ![alt text](gdb.jpg)
 
 ![alt text](codigoC.jpg)
+
+![alt text](ex1.jpg)
+
+![alt text](res1.jpg)
+
+![alt text](ex3.jpg)
+
+![alt text](res3.jpg)
+
+### Condicional
+
+*Comparações* : 
+
+![alt text](comparação.jpg)
+
+![alt text](jump.jpg)
+cmp = v2 - v1
+
+if set : al = 1
+
+*Exercicio comp* :
+
+![alt text](ex1_.jpg)
+
+![alt text](res1_.jpg)
+
+![alt text](ex2.jpg)
+
+![alt text](res2.jpg)
+
+![alt text](ex3_.jpg)
+
+![alt text](res3_.jpg)
+
+![alt text](ex4.jpg)
+
+![alt text](res4.jpg)
+
+### Loops
+
+
+cqto = pula
+
+idiv : rax = quociente da divisao e rdx = resto
+
+test : and bit a bit (& em c)
+
+![alt text](ex2loop.jpg)
+
+![alt text](r2loop.jpg)
+
+![alt text](ex3loop.jpg)
+
+![alt text](res3loop.jpg)
